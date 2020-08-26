@@ -1,0 +1,28 @@
+.onoff_wrapper {
+ display: flex;
+}
+
+.switcherOn {
+    border: 1px solid black;
+    width: 50px;
+    height: 40px;
+}
+
+.switcherOff {
+    border: 1px solid black;
+    width: 50px;
+    height: 40px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
