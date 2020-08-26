@@ -1,37 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./OnOff.module.css"
 
-type OnOffPropsType = {
-    on: boolean
-}
+function OnOff() {
 
-export function OnOff(props: OnOffPropsType) {
+    const [on, setOn] = useState(false)
 
-    console.log(props.on && true)
     return (
         <div className={styles.onoff_wrapper}>
-            <div className={`${styles.switcherOn} ${props.on && styles.green}`}>ON</div>
-            <div className={`${styles.switcherOff} ${!props.on && styles.red}`}>OFF</div>
-            <div className={`${styles.circle} ${props.on && styles.green} ${!props.on && styles.red}`}></div>
+            <div onClick={ () => { setOn(true) } }
+                 className={`${styles.switcherOn} ${on && styles.green}`}>ON
+            </div>
+            <div onClick={ () => { setOn(false) } }
+                 className={`${styles.switcherOff} ${!on && styles.red}`}>OFF
+            </div>
+            <div className={`${styles.circle} ${on && styles.green} ${!on && styles.red}`}></div>
         </div>
     )
-
-    // if (props.on === true) {
-    //     return (
-    //         <div className={styles.onoff_wrapper}>
-    //             <div className={styles.switcherOn + ' ' + styles.green}>ON</div>
-    //             <div className={styles.switcherOff}>OFF</div>
-    //             <div className={styles.circle  + ' ' + styles.green}></div>
-    //         </div>
-    //     )
-    // } else {
-    //     return (
-    //         <div className={styles.onoff_wrapper}>
-    //             <div className={styles.switcherOn}>ON</div>
-    //             <div className={styles.switcherOff  + ' ' + styles.red}>OFF</div>
-    //             <div className={styles.circle  + ' ' + styles.red}></div>
-    //         </div>
-    //     )
-    // }
-
 }
+
+export default OnOff;
