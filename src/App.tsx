@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 
@@ -10,6 +11,7 @@ function App() {
       <div>
           {/*<Accordion titleValue={'Menu collaps'} collapsed={true}/>*/}
           {/*<Accordion titleValue={'Menu expand'} collapsed={false}/>*/}
+          <UncontrolledAccordion titleValue={'Menu'}/>
 
           {/*<Rating value={0}/>*/}
           {/*<Rating value={1}/>*/}
@@ -18,7 +20,6 @@ function App() {
           {/*<Rating value={4}/>*/}
           {/*<Rating value={5}/>*/}
 
-          <OnOff />
           <OnOff />
 
       </div>
