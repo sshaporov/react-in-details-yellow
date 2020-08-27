@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {Rating} from "./components/Rating/Rating";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import OnOff from "./components/OnOff/OnOff";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           {/*<Rating value={3}/>*/}
           {/*<Rating value={4}/>*/}
           {/*<Rating value={5}/>*/}
+          <UncontrolledRating />
 
           <OnOff />
 
