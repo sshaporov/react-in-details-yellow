@@ -22,9 +22,9 @@ type AccordionTitlePropsType = {
 function AccordionTitle(props: AccordionTitlePropsType) {
     console.log('AccordionTitle rendering')
     return (
-        <div>
+        <h2>
             <h3>{props.title}</h3>
-        </div>
+        </h2>
     )
 }
 
