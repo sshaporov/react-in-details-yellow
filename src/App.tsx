@@ -6,12 +6,14 @@ import {Rating, RaitingValueType} from "./components/Rating/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledRatingVersion2} from "./components/UncontrolledRating/UncontrolledRatingVersion2";
+import OnOffTemp from "./components/OnOff/OnOffTemp";
 
 function App() {
     console.log('App rendering')
 
     let [ratingValue, setRatingValue] = useState<RaitingValueType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
+    let [on, setOn] = useState<boolean>(false)
 
 
   return (
@@ -24,6 +26,7 @@ function App() {
           <UncontrolledRatingVersion2 />
 
           <OnOff />
+          <OnOffTemp onClick={ setOn } on={on}/>
 
       </div>
   );
