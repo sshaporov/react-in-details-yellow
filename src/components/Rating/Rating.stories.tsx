@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {RaitingValueType, Rating} from "./Rating";
+import {RatingValueType, Rating} from "./Rating";
 
 export default {
     title: 'Rating',
@@ -14,7 +14,7 @@ export const Rating4 = () => <Rating value={4} onClick={x => x}/>
 export const Rating5 = () => <Rating value={5} onClick={x => x}/>
 
 export const RatingChanging = () => {
-    let [value, setValue] = useState<RaitingValueType>(1)
+    let [value, setValue] = useState<RatingValueType>(1)
     return <Rating value={value}
                    //onClick={value => setValue(value)}
                    onClick={setValue} // тоже самое что и предыдущая строка
