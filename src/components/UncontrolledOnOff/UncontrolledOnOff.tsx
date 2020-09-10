@@ -3,11 +3,12 @@ import styles from "../OnOff/OnOff.module.css"
 
 type PropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
-function UncontrolledOnOff(props: PropsType) {
+export function UncontrolledOnOff(props: PropsType) {
 
-    const [on, setOn] = useState(true)
+    const [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const onClicked = () => {
         setOn(true)
@@ -31,5 +32,3 @@ function UncontrolledOnOff(props: PropsType) {
         </div>
     )
 }
-
-export default UncontrolledOnOff;
