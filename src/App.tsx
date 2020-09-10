@@ -6,7 +6,7 @@ import {Rating, RaitingValueType} from "./components/Rating/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UncontrolledRatingVersion2} from "./components/UncontrolledRating/UncontrolledRatingVersion2";
-import {OnOff} from "./components/OnOff/OnOff";
+// import {OnOff} from "./components/OnOff/OnOff";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <UncontrolledRating />
           <UncontrolledRatingVersion2 />
 
-          {/*<OnOff onClick={ setOn } on={on}/>*/}
+          {/*<OnOff onChange={ setOn } on={on}/>*/}
           <UncontrolledOnOff onChange={setOn}/> {on.toString()}
 
       </div>
