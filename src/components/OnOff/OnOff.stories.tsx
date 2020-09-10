@@ -7,8 +7,10 @@ export default {
     component: OnOff
 }
 
-export const OnMode = () => <OnOff onChange={action("On or Off changed")} on={true}/>
-export const OffMode = () => <OnOff onChange={action("On or Off changed")} on={false}/>
+const callback = action("On or Off changed")
+
+export const OnMode = () => <OnOff onChange={callback} on={true}/>
+export const OffMode = () => <OnOff onChange={callback} on={false}/>
 
 export const ModeChanging = () => {
     let [on, setOn] = useState<boolean>(true)
