@@ -7,8 +7,6 @@ export default {
     component: Select
 }
 
-const onChangeCallback = action("Item was clicked")
-
 export const CustomSelectWithValue = () => {
    const [value, setValue] = useState("2")
     return (
@@ -26,7 +24,8 @@ export const CustomSelectWithValue = () => {
 export const CustomSelectWithoutValue = () => {
     const [value, setValue] = useState(null)
     return (
-            <Select onChange={onChangeCallback}
+            <Select onChange={setValue}
+                    value={value}
                     items={[
                         {title: "gomel", value: "1"},
                         {title: "minsk", value: "2"},
