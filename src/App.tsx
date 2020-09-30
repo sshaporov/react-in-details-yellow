@@ -20,7 +20,7 @@ function App() {
 
   return (
       <div>
-          asd
+
           {/*<Accordion titleValue={'Menu collaps'}*/}
           {/*           onChange={ () => {setAccordionCollapsed(!accordionCollapsed)} }*/}
           {/*           collapsed={accordionCollapsed}*/}
