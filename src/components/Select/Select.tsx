@@ -23,6 +23,8 @@ export function Select(props: SelectPropsType) {
         toggleItems()
     }
 
+    console.log("Select comp rendering")
+
 
     return (
         <div className={styles.select}>
