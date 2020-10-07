@@ -30,10 +30,7 @@ export function Select(props: SelectPropsType) {
             {
                 active &&
                 <div className={styles.items}>
-                    {props.items.map(i => <div
-                        onClick={ () => onItemCLick(i.value) }
-                        key={i.value}
-                        >{i.title}</div>
+                    {props.items.map(i => <div onClick={ () => onItemCLick(i.value) } key={i.value}>{i.title}</div>
                     )}
                 </div>
             }
