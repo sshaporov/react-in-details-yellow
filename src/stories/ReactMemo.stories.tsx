@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 
 export default {
     title: 'React.MEMO'
@@ -16,7 +16,8 @@ const UsersSecret = (props: {users: Array<string>}) => {
 
 const Users = React.memo(UsersSecret) // при изменении стейта в Example компонента User не будет перересовываться
 
-export const Example1 = () => {
+export const LikeUseMemo = () => {
+    console.log('LikeUseMemo')
     const [counter, setCounter] = useState(0)
     const [users, setUsers] = useState(["Sergey", "Kiti", "Gleb"])
 
@@ -32,3 +33,43 @@ export const Example1 = () => {
         <Users users={users}/>
         </>
 }
+
+
+export const LikeUseCallback = () => {
+    console.log('LikeUseCallback')
+    const [counter, setCounter] = useState(0)
+    const [books, setBooks] = useState(["css", "html", "react"])
+
+    // const addBook = () => {
+    //     const newBooks = [...books, 'Angular' + new Date().getTime()]
+    //     setBooks(newBooks)
+    // }
+
+    // const memoizedAddBook = useMemo(() => {
+    //     return addBook
+    // }, [books])
+
+    const memoizedAddBook = useCallback(() => {
+            const newBooks = [...books, 'Angular' + new Date().getTime()]
+            setBooks(newBooks)
+    }, [books])
+
+
+    return <>
+        <button onClick={ () => {setCounter(counter + 1)}}>+</button>
+        {counter}
+       <Book addBook={memoizedAddBook}/>
+    </>
+}
+
+type BookSecretPropsType = {
+    addBook: () => void
+}
+const BooksSecret = (props: BookSecretPropsType) => {
+    console.log('BooksSecret')
+    return <div>
+        <button onClick={() => {props.addBook()}}>add book</button>
+    </div>
+}
+
+const Book = React.memo(BooksSecret)
