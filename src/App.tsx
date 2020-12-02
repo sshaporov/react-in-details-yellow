@@ -5,6 +5,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {Select} from "./components/Select/Select";
+import {Clock} from "./components/Clock/Clock";
 // import {OnOff} from "./components/OnOff/OnOff";
 
 
@@ -36,6 +37,8 @@ function App() {
           {/*<UncontrolledRating onChange={ setRatingValue }/>*/}
           {/*<OnOff onChange={ setOn } on={on}/>*/}
           {/*<UncontrolledOnOff onChange={setOn}/> {on.toString()}*/}
+
+          <Clock />
 
       </div>
   );
